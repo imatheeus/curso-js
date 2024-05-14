@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nacionalidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Teste de nacionalidade</h1>
+        <p>Verifique se sua nacionalidade.</p>
+    </header>
+    <main>
+        <div id="container">
+            <p>Digite o país que você nasceu: <input type="text" name="verificador" id="verificador"> <input type="button" value="Clique aqui para descobrir sua nacionalidade" onclick="verificar()"></p>
+            <div id="nacionalidade">Nacionalidade</div>
+        </div>
+    </main>
+
+    <script>
+        function verificar() {
+            var verificador = document.querySelector('input#verificador')
+            var nacionalidade = document.querySelector('div#nacionalidade')
+            if (verificador.value == 'Brasil' || verificador.value == 'brasil' || verificador.value == 'BRASIL' || verificador.value == 'br' || verificador.value == 'BR') {
+                nacionalidade.innerText = `Você é brasileiro`
+            } else {
+                nacionalidade.innerText = 'Você é estrangeiro'
+            }
+    }
+    </script>
+</body>
+</html>
